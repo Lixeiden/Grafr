@@ -13,7 +13,7 @@ class TelegrafModel(models.Model):
     #category = models.ForeignKey('Category', on_delete=models.PROTECT, null=True, verbose_name='Категория') # make this Table as Secondary via Foreign key "category_id"
 
     def get_absolute_url(self):
-        from django import reverse
+        from django.urls import reverse
         return reverse('pub', kwargs={'uri': self.uri})
 
     def __str__(self):
