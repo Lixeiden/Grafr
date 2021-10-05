@@ -3,7 +3,6 @@ from .models import TelegrafModel
 from .forms import TelegrafForm
 
 
-# make Forbidden 403 - LoginRequiredMixin ?
 class List(ListView):
     model = TelegrafModel
     template_name = 'mainapp/list.html'

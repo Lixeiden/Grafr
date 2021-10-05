@@ -21,7 +21,7 @@ import debug_toolbar
 
 
 urlpatterns = [
-    path('admin/', admin.site.urls), # make Forbidden 403
+    path('admin/', admin.site.urls),
     path('', include('mainapp.urls')),
 ]
 
