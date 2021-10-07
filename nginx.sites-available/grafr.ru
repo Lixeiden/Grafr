@@ -7,6 +7,10 @@ server {
 	index index.html index.htm index.nginx-debian.html;
 
 	server_name grafr.ru www.grafr.ru;
+	
+	location = /favicon.ico {
+		alias /home/lix/Grafr/favicons/favicon.ico;
+	}
 
 	location / {
 		proxy_pass http://127.0.0.1:8001;
