@@ -11,7 +11,7 @@ class List(ListView):
 
     def get_context_data(self, *, object_list=None, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['title'] = 'Все записи'
+        context['title'] = 'List of all entries'
         return context
 
     def get_queryset(self):
