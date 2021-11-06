@@ -1,5 +1,5 @@
 # Grafr
-Python3.8 + Django3.2.5 project for my own implementation of telegra.ph service.
+Python3.8 + Django3.2.5 project for my own implementation of telegra.ph/pastebin.com service.
 
 Deployment (w/o Docker):
 * Install packages: `bash $: sudo apt install nginx python3.8 python3.8-dev libssl-dev libpq-dev postgresql`
