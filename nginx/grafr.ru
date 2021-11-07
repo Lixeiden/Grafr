@@ -1,9 +1,9 @@
 server {
-	listen 80;
-	listen [::]:80;
-	server_name grafr.ru www.grafr.ru;
+    listen 80;
+    listen [::]:80;
+    server_name grafr.ru www.grafr.ru;
 
-	location = /favicon.ico {
+    location = /favicon.ico {
 	    alias /home/lix/Grafr/favicons/favicon.ico; access_log off; log_not_found off;
 	}
 
@@ -13,11 +13,11 @@ server {
         include /etc/nginx/proxy.conf;
     }
 
-	location /static/ {
+    location /static/ {
 	        root /home/lix/Grafr/GrafrProj;
 	}
 
-	location / {
+    location / {
 		include /etc/nginx/proxy.conf;
 	}
 
