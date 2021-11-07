@@ -1,12 +1,16 @@
 server {
 	listen 80;
+	listen [::]:80;
 	server_name grafr.ru www.grafr.ru;
-	
-#	listen [::]:80;
-#	root /var/www/html;
-#	index index.html index.htm index.nginx-debian.html;
-	
-	location = /favicon.ico { alias /home/lix/Grafr/favicons/favicon.ico; access_log off; log_not_found off; }
+
+	location = /favicon.ico {
+	    alias /home/lix/Grafr/favicons/favicon.ico; access_log off; log_not_found off;
+	}
+
+    location = /list {
+        auth_basic "List";
+        auth_basic_user_file /etc/nginx/auth.basic;
+    }
 
 	location /static/ {
 	        root /home/lix/Grafr/GrafrProj;
