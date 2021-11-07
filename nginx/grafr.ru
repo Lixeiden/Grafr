@@ -5,7 +5,7 @@ server {
 
     location = /favicon.ico {
 	    alias /home/lix/Grafr/favicons/favicon.ico; access_log off; log_not_found off;
-	}
+    }
 
     location /list {
         auth_basic "List";
@@ -15,10 +15,10 @@ server {
 
     location /static/ {
 	        root /home/lix/Grafr/GrafrProj;
-	}
+    }
 
     location / {
 		include /etc/nginx/proxy.conf;
-	}
+    }
 
 }
