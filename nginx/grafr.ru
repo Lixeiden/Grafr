@@ -7,7 +7,7 @@ server {
 	    alias /home/lix/Grafr/favicons/favicon.ico; access_log off; log_not_found off;
 	}
 
-    location = /list {
+    location /list {
         auth_basic "List";
         auth_basic_user_file /etc/nginx/auth.basic;
     }
