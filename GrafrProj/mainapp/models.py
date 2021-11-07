@@ -2,10 +2,10 @@ from django.db import models
 
 
 class TelegrafModel(models.Model):
-    uri = models.CharField(primary_key=True, max_length=6, verbose_name='Ссылка')
-    created = models.DateField(auto_now_add=True, verbose_name='Дата создания')
-    file = models.FileField(upload_to='uploads/', verbose_name='Файл', blank=True)
-    content = models.TextField(db_index=True, verbose_name='Содержание')
+    uri = models.CharField(primary_key=True, max_length=6, verbose_name='Link')
+    created = models.DateField(auto_now_add=True, verbose_name='Creation date')
+    file = models.FileField(upload_to='uploads/', verbose_name='Path to the file', blank=True)
+    content = models.TextField(db_index=True, verbose_name='Content')
 
     def get_absolute_url(self):
         from django.urls import reverse
@@ -15,6 +15,6 @@ class TelegrafModel(models.Model):
         return self.uri
 
     class Meta:
-        verbose_name = 'Запись'
-        verbose_name_plural = 'Записи'
+        verbose_name = 'Entry'
+        verbose_name_plural = 'Entries'
         ordering = ['-created', 'uri']
