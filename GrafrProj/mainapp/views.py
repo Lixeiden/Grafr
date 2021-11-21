@@ -1,6 +1,25 @@
 from django.views.generic import ListView, DetailView, CreateView
 from .models import TelegrafModel
 from .forms import TelegrafForm
+from rest_framework.response import Response
+from rest_framework.views import APIView
+from .serializers import GrafrSerializer
+
+
+class AllEntries(APIView):
+    '''List of all entries'''
+    def get(self, request):
+        entries = TelegrafModel.objects.all()
+        serializer = GrafrSerializer(entries, many=True)
+        return Response(serializer.data)
+
+
+class OneEntry(APIView):
+    '''One entry'''
+    def get(self, request, uri):
+        entry = TelegrafModel.objects.get(uri=uri)
+        serializer = GrafrSerializer(entry)
+        return Response(serializer.data)
 
 
 class List(ListView):

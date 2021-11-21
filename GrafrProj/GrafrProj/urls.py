@@ -23,9 +23,10 @@ import debug_toolbar
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('mainapp.urls')),
+    path('api-auth/', include('rest_framework.urls')),
 ]
 
 if settings.DEBUG:
     urlpatterns += [
-        path('__debug__/', include(debug_toolbar.urls)), # django-debug-toolbar
+        path('__debug__/', include(debug_toolbar.urls)),
     ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) # routes for access to MEDIA/UPLOAD on dev server

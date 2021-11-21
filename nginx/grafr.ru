@@ -13,6 +13,12 @@ server {
         include /etc/nginx/proxy.conf;
     }
 
+    location /all {
+        auth_basic "All";
+        auth_basic_user_file /etc/nginx/auth.basic;
+        include /etc/nginx/proxy.conf;
+    }
+
     location /static/ {
 	        root /home/lix/Grafr/GrafrProj;
     }
