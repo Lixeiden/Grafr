@@ -14,7 +14,7 @@
                         <a href="{% url 'pub' item.uri %}"> <b>{{ item.uri }}</b> </a>
                     </div>
 
-                    {{ item.content|safe }}
+                    {{ item.content|linebreaksbr|safe }}
                     <div class="card-footer text-muted mt-3">
 
 
