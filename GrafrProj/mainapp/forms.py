@@ -27,5 +27,5 @@ class TelegrafForm(forms.ModelForm):
     def clean_uri(self):
         uri = self.cleaned_data['uri']
         if not re.fullmatch(r'\w+', uri):
-            raise ValidationError(_(mark_safe('Ссылка должна содержать только буквы, цифры и подчеркивания.<br>Регистр символов имеет значение. Макс. 6 символов.')), code='invalid')
+            raise ValidationError(_(mark_safe('Link may contain only letters, digits or underscores.<br>Case-sensitive. Max. 6 characters.')), code='invalid')
         return uri
