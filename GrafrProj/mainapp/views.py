@@ -1,6 +1,6 @@
 from django.views.generic import ListView, DetailView, CreateView
 from .models import TelegrafModel
-from .forms import TelegrafForm
+from .forms import GrafrForm
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from .serializers import GrafrSerializer
@@ -53,6 +53,6 @@ class Pub(DetailView):
 
 
 class Add(CreateView):
-    form_class = TelegrafForm
+    form_class = GrafrForm
     template_name = 'mainapp/add.html'
     # success_url = reverse_lazy('add')

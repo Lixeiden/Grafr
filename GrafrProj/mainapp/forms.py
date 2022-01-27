@@ -6,7 +6,7 @@ from django.core.exceptions import ValidationError
 from django.utils.safestring import mark_safe
 
 
-class TelegrafForm(forms.ModelForm):
+class GrafrForm(forms.ModelForm):
     uri = forms.CharField(label=False, max_length=6, widget=forms.TextInput(
         attrs={'class': 'form-control', 'autocomplete': 'off', 'placeholder': 'desired link'}))
     content = forms.CharField(label=False, widget=forms.Textarea(
