@@ -4,7 +4,7 @@ server {
     server_name grafr.ru www.grafr.ru;
 
     location = /favicon.ico {
-	    alias /home/lix/Grafr/favicons/favicon.ico; access_log off; log_not_found off;
+	    alias /home/Grafr/favicons/favicon.ico; access_log off; log_not_found off;
     }
 
     location /list {
@@ -20,7 +20,7 @@ server {
     }
 
     location /static/ {
-	        root /home/lix/Grafr/GrafrProj;
+	        root /home/Grafr/GrafrProj;
     }
 
     location / {
