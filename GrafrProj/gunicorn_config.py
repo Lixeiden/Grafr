@@ -1,5 +1,5 @@
-command = '/home/lix/Grafr/venv/bin/gunicorn'
-pythonpath = '/home/lix/Grafr/GrafrProj'
+command = '/home/Grafr/venv/bin/gunicorn'
+pythonpath = '/home/Grafr/GrafrProj'
 bind = '127.0.0.1:8001'
 workers = 3
 user = 'root'
