@@ -26,3 +26,4 @@ Deployment (w/o Docker):
 * export SECRET_KEY=''
 * nginx configs/auth_basic + softlink + nginx -t + restart
 * exec gunicorn  -c "/home/Grafr/GrafrProj/gunicorn_config.py" GrafrProj.wsgi // TODO: /etc/systemd/system/Grafr.service + systemctl start Grafr + systemctl status Grafr
+* firewall: open ssh ???? & http 80 port
